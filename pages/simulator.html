@@ -2,242 +2,114 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>100Boxes</title>
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100Boxes</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="navbar__left">
-            <img src="/assets/img/box.png" alt="Logo caja" class="navbar__icon" />
-            <h1 class="navbar__title">100Boxes</h1>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar__left">
+      <img src="/assets/img/box.png" alt="Logo caja" class="navbar__icon" />
+      <h1 class="navbar__title">100Boxes</h1>
+    </div>
+    <div class="navbar__right">
+      <a href="#" class="navbar__link">Inicio</a>
+      <a href="#" class="navbar__link">About</a>
+      <a href="#" class="navbar__link">Contacto</a>
+    </div>
+  </nav>
+  <!-- SIMULADOR -->
+   <!-- Sección 1: Selección de Estrategias -->
+  <section class="simulacion">
+    <section class="simulacion__estrategias">
+      <h2 class="simulacion__titulo">Selecciona una estrategia</h2>
+      <ul class="simulacion__lista">
+        <li class="simulacion__opcion">
+          <label>
+            <input type="radio" class="simulacion__radio" name="estrategia" id="estrategia1">
+            Cada prisionero selecciona 50 cajas al azar.
+          </label>
+        </li>
+        <li class="simulacion__opcion">
+          <label>
+            <input type="radio" class="simulacion__radio" name="estrategia" id="estrategia2">
+            Cada prisionero selecciona la caja que corresponde a su número y sigue el ciclo.
+          </label>
+        </li>
+        <li class="simulacion__opcion">
+          <label>
+            <input type="radio" class="simulacion__radio" name="estrategia" id="estrategia3">
+            Cada prisionero abre una caja al azar y sigue el ciclo determinado por esa caja.
+          </label>
+        </li>
+      </ul>
+      <button class="simulacion__boton" id="iniciarSimulacion">Iniciar simulación</button>
+    </section>
+  </section>
+  <!-- Sección 2: Selección de Estrategias -->
+  <section>
+    <h2>Resultados</h2>
+      <div class="simulacion__card">
+        <h2 class="simulacion__card-titulo">Resultados de la Simulación</h2>
+        <p class="simulacion__card-texto"><strong>Número de Aciertos:</strong> 8</p>
+        <p class="simulacion__card-texto"><strong>Número de Errores:</strong> 2</p>
+        <p class="simulacion__card-texto"><strong>Jugador:</strong> ¡Ganaste! 🎉</p>
+      </div>
+  </section>
+    <!-- Sección 3: Selección de Estrategias -->
+    <section class="detalle">
+      <h2 class="detalle__titulo">Detalle del Juego</h2>
+      <div class="detalle__contenido">
+    
+        <div class="detalle__jugador">
+          <h3 class="detalle__jugador-titulo">Jugador No. 1</h3>
+          <p class="detalle__texto">Números encontrados:</p>
+          <div class="detalle__numeros">
+            <span class="detalle__numero">15</span>
+            <span class="detalle__numero">15</span>
+            <span class="detalle__numero">15</span>
+            <span class="detalle__numero">15</span>
+            <span class="detalle__numero">15</span>
+            <span class="detalle__numero">15</span>
+            <span class="detalle__numero">15</span>
+            <span class="detalle__numero">15</span>
+            <span class="detalle__numero">15</span>
+            <span class="detalle__numero">15</span>
+            <span class="detalle__numero">15</span>
+            <span class="detalle__numero">15</span>
+            <span class="detalle__numero">15</span>
+            <span class="detalle__numero">15</span>
+            <span class="detalle__numero">15</span>
+            <span class="detalle__numero">15</span>
+          </div>
         </div>
-        <div class="navbar__right">
-            <a href="#" class="navbar__link">Inicio</a>
-            <a href="#" class="navbar__link">About</a>
-            <a href="#" class="navbar__link">Contacto</a>
-        </div>
-    </nav>
-    <!-- SIMULADOR -->
-    <section class="simulacion">
-        <!-- Sección 1: Selección de Estrategias -->
-        <section class="simulacion__estrategias">
-          <h2 class="simulacion__titulo">Selecciona una estrategia</h2>
-          <ul class="simulacion__lista">
-            <li class="simulacion__opcion">
-              <label>
-                <input type="radio" class="simulacion__radio" name="estrategia" id="estrategia1">
-                Cada prisionero selecciona 50 cajas al azar.
-              </label>
-            </li>
-            <li class="simulacion__opcion">
-              <label>
-                <input type="radio" class="simulacion__radio" name="estrategia" id="estrategia2">
-                Cada prisionero selecciona la caja que corresponde a su número y sigue el ciclo.
-              </label>
-            </li>
-            <li class="simulacion__opcion">
-              <label>
-                <input type="radio" class="simulacion__radio" name="estrategia" id="estrategia3">
-                Cada prisionero abre una caja al azar y sigue el ciclo determinado por esa caja.
-              </label>
-            </li>
-          </ul>
-          <button class="simulacion__boton" id="iniciarSimulacion">Iniciar simulación</button>
-        </section>
-        
+    
+      </div>
+    </section>
+    
 
-        <!-- Sección 2: Resultados -->
-        <section class="simulacion__resultados">         
-            <!-- Aquí se llenarán los resultados al hacer clic en "Iniciar simulación" -->
-             <div class="resultado__resumen">
-              <div class="card card--resultado" style="background-color: aqua;">
-                <div class="card__header">
-                  <h2 class="card__title">Resultados de la Estrategia</h2>
-                </div>
-                <div class="card__body">
-                  <div class="card__info">
-                    <p class="card__info-item"><strong>Estrategia:</strong> Estrategia X</p>
-                    <p class="card__info-item"><strong>Prisioneros que encontraron su número:</strong> 15</p>
-                    <p class="card__info-item"><strong>Prisioneros que no encontraron su número:</strong> 5</p>
-                  </div>
-                  <div class="card__conclusion">
-                    <p class="card__conclusion-text">Conclusión: Los prisioneros ganan</p>
-                  </div>
-                </div>
-              </div>
-             </div>
 
-            
-            <div class="card card--prisionero">
-              <div class="card__header">
-                <h2 class="card__title">Prisionero #1</h2>
-              </div>
-              <div class="card__body">
-                <div class="card__prisoner-info">
-                  <p class="card__prisoner-item"><strong>Cajas encontradas:</strong></p>
-                  <div class="card__prisoner-boxes">
-                    <span class="card__prisoner-box">2</span>
-                    <span class="card__prisoner-box">8</span>
-                    <span class="card__prisoner-box">9</span>
-                    <span class="card__prisoner-box">10</span>
-                    <span class="card__prisoner-box">48</span>
-                    <span class="card__prisoner-box">2</span>
-                    <span class="card__prisoner-box">8</span>
-                    <span class="card__prisoner-box">9</span>
-                    <span class="card__prisoner-box">10</span>
-                    <span class="card__prisoner-box">48</span>
-                    <span class="card__prisoner-box">2</span>
-                    <span class="card__prisoner-box">8</span>
-                    <span class="card__prisoner-box">9</span>
-                    <span class="card__prisoner-box">10</span>
-                    <span class="card__prisoner-box">48</span>
-                    <!-- Agregar más números según sea necesario -->
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div class="card card--prisionero">
-              <div class="card__header">
-                <h2 class="card__title">Prisionero #1</h2>
-              </div>
-              <div class="card__body">
-                <div class="card__prisoner-info">
-                  <p class="card__prisoner-item"><strong>Cajas encontradas:</strong></p>
-                  <div class="card__prisoner-boxes">
-                    <span class="card__prisoner-box">2</span>
-                    <span class="card__prisoner-box">8</span>
-                    <span class="card__prisoner-box">9</span>
-                    <span class="card__prisoner-box">10</span>
-                    <span class="card__prisoner-box">48</span>
-                    <span class="card__prisoner-box">2</span>
-                    <span class="card__prisoner-box">8</span>
-                    <span class="card__prisoner-box">9</span>
-                    <span class="card__prisoner-box">10</span>
-                    <span class="card__prisoner-box">48</span>
-                    <span class="card__prisoner-box">2</span>
-                    <span class="card__prisoner-box">8</span>
-                    <span class="card__prisoner-box">9</span>
-                    <span class="card__prisoner-box">10</span>
-                    <span class="card__prisoner-box">48</span>
-                    <!-- Agregar más números según sea necesario -->
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div class="card card--prisionero">
-              <div class="card__header">
-                <h2 class="card__title">Prisionero #1</h2>
-              </div>
-              <div class="card__body">
-                <div class="card__prisoner-info">
-                  <p class="card__prisoner-item"><strong>Cajas encontradas:</strong></p>
-                  <div class="card__prisoner-boxes">
-                    <span class="card__prisoner-box">2</span>
-                    <span class="card__prisoner-box">8</span>
-                    <span class="card__prisoner-box">9</span>
-                    <span class="card__prisoner-box">10</span>
-                    <span class="card__prisoner-box">48</span>
-                    <span class="card__prisoner-box">2</span>
-                    <span class="card__prisoner-box">8</span>
-                    <span class="card__prisoner-box">9</span>
-                    <span class="card__prisoner-box">10</span>
-                    <span class="card__prisoner-box">48</span>
-                    <span class="card__prisoner-box">2</span>
-                    <span class="card__prisoner-box">8</span>
-                    <span class="card__prisoner-box">9</span>
-                    <span class="card__prisoner-box">10</span>
-                    <span class="card__prisoner-box">48</span>
-                    <!-- Agregar más números según sea necesario -->
-                  </div>
-                </div>
-              </div>
-            </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__author">
+      <p>Creado por Bladimir Benavides</p>
+    </div>
+    <div class="footer__links">
+      <a href="#" class="footer__icon-link" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/img/github.png" alt="GitHub" class="footer__icon" />
+      </a>
+      <a href="#" class="footer__icon-link" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/img/linkedin.png" alt="LinkedIn" class="footer__icon" />
+      </a>
+    </div>
+  </footer>
 
-            <div class="card card--prisionero">
-              <div class="card__header">
-                <h2 class="card__title">Prisionero #1</h2>
-              </div>
-              <div class="card__body">
-                <div class="card__prisoner-info">
-                  <p class="card__prisoner-item"><strong>Cajas encontradas:</strong></p>
-                  <div class="card__prisoner-boxes">
-                    <span class="card__prisoner-box">2</span>
-                    <span class="card__prisoner-box">8</span>
-                    <span class="card__prisoner-box">9</span>
-                    <span class="card__prisoner-box">10</span>
-                    <span class="card__prisoner-box">48</span>
-                    <span class="card__prisoner-box">2</span>
-                    <span class="card__prisoner-box">8</span>
-                    <span class="card__prisoner-box">9</span>
-                    <span class="card__prisoner-box">10</span>
-                    <span class="card__prisoner-box">48</span>
-                    <span class="card__prisoner-box">2</span>
-                    <span class="card__prisoner-box">8</span>
-                    <span class="card__prisoner-box">9</span>
-                    <span class="card__prisoner-box">10</span>
-                    <span class="card__prisoner-box">48</span>
-                    <!-- Agregar más números según sea necesario -->
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card card--prisionero">
-              <div class="card__header">
-                <h2 class="card__title">Prisionero #1</h2>
-              </div>
-              <div class="card__body">
-                <div class="card__prisoner-info">
-                  <p class="card__prisoner-item"><strong>Cajas encontradas:</strong></p>
-                  <div class="card__prisoner-boxes">
-                    <span class="card__prisoner-box">2</span>
-                    <span class="card__prisoner-box">8</span>
-                    <span class="card__prisoner-box">9</span>
-                    <span class="card__prisoner-box">10</span>
-                    <span class="card__prisoner-box">48</span>
-                    <span class="card__prisoner-box">2</span>
-                    <span class="card__prisoner-box">8</span>
-                    <span class="card__prisoner-box">9</span>
-                    <span class="card__prisoner-box">10</span>
-                    <span class="card__prisoner-box">48</span>
-                    <span class="card__prisoner-box">2</span>
-                    <span class="card__prisoner-box">8</span>
-                    <span class="card__prisoner-box">9</span>
-                    <span class="card__prisoner-box">10</span>
-                    <span class="card__prisoner-box">48</span>
-                    <!-- Agregar más números según sea necesario -->
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            
-             <!-- Aquí se llenarán los resultados al hacer clic en "Iniciar simulación" -->
-          
-        </section>
-      </section>
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer__author">
-            <p>Creado por Bladimir Benavides</p>
-        </div>
-        <div class="footer__links">
-            <a href="#" class="footer__icon-link" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/img/github.png" alt="GitHub" class="footer__icon" />
-            </a>
-            <a href="#" class="footer__icon-link" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/img/linkedin.png" alt="LinkedIn" class="footer__icon" />
-            </a>
-        </div>
-    </footer>
-
-    <script src="/script/simulacionPrisioneros.js"></script>
+  <script src="/script/simulacionPrisioneros.js"></script>
 </body>
 
 </html>

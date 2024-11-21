@@ -213,136 +213,145 @@ a{
 /******************* SIMULATOR *******************/
 
 /* Estilos base */
-
 .simulacion {
-  width: 100%;
-  margin: 0 auto;
   padding: 20px;
+  text-align: center;
 }
 
 .simulacion__titulo {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-.simulacion__estrategias, .simulacion__resultados {
-  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #ff6b6b; /* Color vibrante */
+  margin-bottom: 15px;
 }
 
 .simulacion__lista {
   list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+  
 }
 
 .simulacion__opcion {
-  margin-bottom: 10px;
+  margin: 10px 0;
+  padding: 15px;
+  background-color: #ffe066; /* Amarillo brillante */
+  border: 2px solid #ff9f1c; /* Borde vibrante */
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.simulacion__checkbox {
+.simulacion__opcion:hover {
+  transform: scale(1.05); /* Efecto de agrandamiento al pasar el mouse */
+  background-color: #f6c90e;
+}
+
+.simulacion__radio {
   margin-right: 10px;
 }
 
+.simulacion__radio:checked + label {
+  font-weight: bold; /* Destacar opción seleccionada */
+}
+
 .simulacion__boton {
-  background-color: #4CAF50;
-  color: white;
+  margin-top: 20px;
   padding: 10px 20px;
-  border: none;
-  cursor: pointer;
   font-size: 1rem;
-  border-radius: 5px;
+  color: #ffffff;
+  background-color: #2ec4b6; /* Verde menta */
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .simulacion__boton:hover {
-  background-color: #45a049;
+  background-color: #1b998b;
+  transform: scale(1.1); /* Agrandar botón al pasar el mouse */
 }
 
-.simulacion__resultados {
-  width: 98%;
-  padding: 20px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
+.simulacion__boton:active {
+  transform: scale(0.9); /* Reducir botón al hacer clic */
+  background-color: #1b998b;
 }
-.resultado__resumen{
+
+/* card 1 */
+.simulacion__card {
+  background-color: #fff7d6; /* Amarillo brillante */
+  border: 2px solid #ff9f1c; /* Borde vibrante */
+  border-radius: 15px; /* Bordes suaves */
+  padding: 20px;
+  text-align: center;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+}
+
+.simulacion__card-titulo {
+  font-size: 1.2rem;
+  color: #ff6b6b; /* Rojo vibrante */
+  margin-bottom: 15px;
+}
+
+.simulacion__card-texto {
+  font-size: 1rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* CARD3 */
+.detalle {
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+.detalle__titulo {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.detalle__contenido {
   display: flex;
   flex-direction: column;
-  align-content: start;
-  width: 100%;
-  justify-content: flex-start;
-  background-color: #0056b3;
+  gap: 15px;
 }
 
-/* Estilos de la tarjeta (card) */
-.card {
-  max-width: 400px; /* Ajusta el máximo tamaño para que no ocupe todo el ancho */
-  width: 100%; /* Asegura que no sea más grande que el contenedor */
-  margin: 0 auto; /* Centra la tarjeta horizontalmente */
-  padding: 15px; /* Añade un poco de espacio interno */
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  padding: 20px;
+.detalle__jugador {
+  background-color: #ffefb1; /* Amarillo más intenso */
+  border: 2px solid #ff9f1c;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-.card__header {
-  margin-bottom: 15px;
+.detalle__jugador-titulo {
+  font-size: 0.7rem;
+  color: #1b998b; /* Verde menta */
+  margin-bottom: 10px;
 }
 
-.card__title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
+.detalle__texto {
+  font-size: 0.8rem;
+  color: #333; /* Texto oscuro */
+  margin-bottom: 10px;
+  text-align: left;
 }
 
-.card__body {
-  font-size: 1rem;
-  color: #555;
+.detalle__numeros {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 4 columnas */
+  gap: 10px;
+  justify-content: center;
 }
 
-/* Estilos para los resultados */
-.card--resultado .card__info {
-  margin-bottom: 15px;
-}
-
-.card__info-item {
-  margin-bottom: 5px;
-}
-
-.card__conclusion {
-  margin-top: 20px;
-}
-
-.card__conclusion-text {
-  font-weight: bold;
-  color: #007b00; /* Verde para "ganan" */
-}
-
-/* Estilos para los prisioneros */
-.card--prisionero {
-
-}
-
-.card__prisoner-info{
-  background-color: #ffffff;
-}
-.card__prisoner-item {
-  margin-bottom: 5px;
-}
-
-.card__prisoner-boxes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 10px;
-}
-
-.card__prisoner-box {
-  background-color: #f1f1f1;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 8px;
-  font-weight: bold;
-}
-
-.card__prisoner-box:hover {
-  background-color: #e0e0e0;
+.detalle__numero {
+  font-size: 0.7rem;
+  background-color: #ff6b6b; /* Fondo rojo vibrante */
+  color: #fff; /* Texto blanco */
+  padding: 5px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
