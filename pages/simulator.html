@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>100Boxes</title>
-    <link rel="stylesheet" href="/css/pages/simulator.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -22,875 +22,206 @@
         </div>
     </nav>
     <!-- SIMULADOR -->
-    <div class="main__container">
-        <!-- prisioneros -->
-        <div class="container__prisoners">
-            <!-- fila 1 -->
-            <div class="rows_prisoners">
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>1</p>
+    <section class="simulacion">
+        <!-- Sección 1: Selección de Estrategias -->
+        <section class="simulacion__estrategias">
+          <h2 class="simulacion__titulo">Selecciona una estrategia</h2>
+          <ul class="simulacion__lista">
+            <li class="simulacion__opcion">
+              <label>
+                <input type="radio" class="simulacion__radio" name="estrategia" id="estrategia1">
+                Cada prisionero selecciona 50 cajas al azar.
+              </label>
+            </li>
+            <li class="simulacion__opcion">
+              <label>
+                <input type="radio" class="simulacion__radio" name="estrategia" id="estrategia2">
+                Cada prisionero selecciona la caja que corresponde a su número y sigue el ciclo.
+              </label>
+            </li>
+            <li class="simulacion__opcion">
+              <label>
+                <input type="radio" class="simulacion__radio" name="estrategia" id="estrategia3">
+                Cada prisionero abre una caja al azar y sigue el ciclo determinado por esa caja.
+              </label>
+            </li>
+          </ul>
+          <button class="simulacion__boton" id="iniciarSimulacion">Iniciar simulación</button>
+        </section>
+        
+
+        <!-- Sección 2: Resultados -->
+        <section class="simulacion__resultados">         
+            <!-- Aquí se llenarán los resultados al hacer clic en "Iniciar simulación" -->
+             <div class="resultado__resumen">
+              <div class="card card--resultado" style="background-color: aqua;">
+                <div class="card__header">
+                  <h2 class="card__title">Resultados de la Estrategia</h2>
                 </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>2</p>
+                <div class="card__body">
+                  <div class="card__info">
+                    <p class="card__info-item"><strong>Estrategia:</strong> Estrategia X</p>
+                    <p class="card__info-item"><strong>Prisioneros que encontraron su número:</strong> 15</p>
+                    <p class="card__info-item"><strong>Prisioneros que no encontraron su número:</strong> 5</p>
+                  </div>
+                  <div class="card__conclusion">
+                    <p class="card__conclusion-text">Conclusión: Los prisioneros ganan</p>
+                  </div>
                 </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>3</p>
+              </div>
+             </div>
+
+            
+            <div class="card card--prisionero">
+              <div class="card__header">
+                <h2 class="card__title">Prisionero #1</h2>
+              </div>
+              <div class="card__body">
+                <div class="card__prisoner-info">
+                  <p class="card__prisoner-item"><strong>Cajas encontradas:</strong></p>
+                  <div class="card__prisoner-boxes">
+                    <span class="card__prisoner-box">2</span>
+                    <span class="card__prisoner-box">8</span>
+                    <span class="card__prisoner-box">9</span>
+                    <span class="card__prisoner-box">10</span>
+                    <span class="card__prisoner-box">48</span>
+                    <span class="card__prisoner-box">2</span>
+                    <span class="card__prisoner-box">8</span>
+                    <span class="card__prisoner-box">9</span>
+                    <span class="card__prisoner-box">10</span>
+                    <span class="card__prisoner-box">48</span>
+                    <span class="card__prisoner-box">2</span>
+                    <span class="card__prisoner-box">8</span>
+                    <span class="card__prisoner-box">9</span>
+                    <span class="card__prisoner-box">10</span>
+                    <span class="card__prisoner-box">48</span>
+                    <!-- Agregar más números según sea necesario -->
+                  </div>
                 </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>4</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>5</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>6</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>7</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>8</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>9</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>10</p>
-                </div>
+              </div>
             </div>
-            <!-- fila 2 -->
-            <div class="rows_prisoners">
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>11</p>
+
+            <div class="card card--prisionero">
+              <div class="card__header">
+                <h2 class="card__title">Prisionero #1</h2>
+              </div>
+              <div class="card__body">
+                <div class="card__prisoner-info">
+                  <p class="card__prisoner-item"><strong>Cajas encontradas:</strong></p>
+                  <div class="card__prisoner-boxes">
+                    <span class="card__prisoner-box">2</span>
+                    <span class="card__prisoner-box">8</span>
+                    <span class="card__prisoner-box">9</span>
+                    <span class="card__prisoner-box">10</span>
+                    <span class="card__prisoner-box">48</span>
+                    <span class="card__prisoner-box">2</span>
+                    <span class="card__prisoner-box">8</span>
+                    <span class="card__prisoner-box">9</span>
+                    <span class="card__prisoner-box">10</span>
+                    <span class="card__prisoner-box">48</span>
+                    <span class="card__prisoner-box">2</span>
+                    <span class="card__prisoner-box">8</span>
+                    <span class="card__prisoner-box">9</span>
+                    <span class="card__prisoner-box">10</span>
+                    <span class="card__prisoner-box">48</span>
+                    <!-- Agregar más números según sea necesario -->
+                  </div>
                 </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>12</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>13</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>14</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>15</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>16</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>17</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>18</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>19</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>20</p>
-                </div>
+              </div>
             </div>
-            <!-- fila 3 -->
-            <div class="rows_prisoners">
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>1</p>
+
+            <div class="card card--prisionero">
+              <div class="card__header">
+                <h2 class="card__title">Prisionero #1</h2>
+              </div>
+              <div class="card__body">
+                <div class="card__prisoner-info">
+                  <p class="card__prisoner-item"><strong>Cajas encontradas:</strong></p>
+                  <div class="card__prisoner-boxes">
+                    <span class="card__prisoner-box">2</span>
+                    <span class="card__prisoner-box">8</span>
+                    <span class="card__prisoner-box">9</span>
+                    <span class="card__prisoner-box">10</span>
+                    <span class="card__prisoner-box">48</span>
+                    <span class="card__prisoner-box">2</span>
+                    <span class="card__prisoner-box">8</span>
+                    <span class="card__prisoner-box">9</span>
+                    <span class="card__prisoner-box">10</span>
+                    <span class="card__prisoner-box">48</span>
+                    <span class="card__prisoner-box">2</span>
+                    <span class="card__prisoner-box">8</span>
+                    <span class="card__prisoner-box">9</span>
+                    <span class="card__prisoner-box">10</span>
+                    <span class="card__prisoner-box">48</span>
+                    <!-- Agregar más números según sea necesario -->
+                  </div>
                 </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>2</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>3</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>4</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>5</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>6</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>7</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>8</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>9</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>10</p>
-                </div>
+              </div>
             </div>
-            <!-- fila 4 -->
-            <div class="rows_prisoners">
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>11</p>
+
+            <div class="card card--prisionero">
+              <div class="card__header">
+                <h2 class="card__title">Prisionero #1</h2>
+              </div>
+              <div class="card__body">
+                <div class="card__prisoner-info">
+                  <p class="card__prisoner-item"><strong>Cajas encontradas:</strong></p>
+                  <div class="card__prisoner-boxes">
+                    <span class="card__prisoner-box">2</span>
+                    <span class="card__prisoner-box">8</span>
+                    <span class="card__prisoner-box">9</span>
+                    <span class="card__prisoner-box">10</span>
+                    <span class="card__prisoner-box">48</span>
+                    <span class="card__prisoner-box">2</span>
+                    <span class="card__prisoner-box">8</span>
+                    <span class="card__prisoner-box">9</span>
+                    <span class="card__prisoner-box">10</span>
+                    <span class="card__prisoner-box">48</span>
+                    <span class="card__prisoner-box">2</span>
+                    <span class="card__prisoner-box">8</span>
+                    <span class="card__prisoner-box">9</span>
+                    <span class="card__prisoner-box">10</span>
+                    <span class="card__prisoner-box">48</span>
+                    <!-- Agregar más números según sea necesario -->
+                  </div>
                 </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>12</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>13</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>14</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>15</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>16</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>17</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>18</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>19</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>20</p>
-                </div>
+              </div>
             </div>
-            <!-- fila 5 -->
-            <div class="rows_prisoners">
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>1</p>
+
+            <div class="card card--prisionero">
+              <div class="card__header">
+                <h2 class="card__title">Prisionero #1</h2>
+              </div>
+              <div class="card__body">
+                <div class="card__prisoner-info">
+                  <p class="card__prisoner-item"><strong>Cajas encontradas:</strong></p>
+                  <div class="card__prisoner-boxes">
+                    <span class="card__prisoner-box">2</span>
+                    <span class="card__prisoner-box">8</span>
+                    <span class="card__prisoner-box">9</span>
+                    <span class="card__prisoner-box">10</span>
+                    <span class="card__prisoner-box">48</span>
+                    <span class="card__prisoner-box">2</span>
+                    <span class="card__prisoner-box">8</span>
+                    <span class="card__prisoner-box">9</span>
+                    <span class="card__prisoner-box">10</span>
+                    <span class="card__prisoner-box">48</span>
+                    <span class="card__prisoner-box">2</span>
+                    <span class="card__prisoner-box">8</span>
+                    <span class="card__prisoner-box">9</span>
+                    <span class="card__prisoner-box">10</span>
+                    <span class="card__prisoner-box">48</span>
+                    <!-- Agregar más números según sea necesario -->
+                  </div>
                 </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>2</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>3</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>4</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>5</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>6</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>7</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>8</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>9</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>10</p>
-                </div>
+              </div>
             </div>
-            <!-- fila 6 -->
-            <div class="rows_prisoners">
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>11</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>12</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>13</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>14</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>15</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>16</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>17</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>18</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>19</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>20</p>
-                </div>
-            </div>
-            <!-- fila 7 -->
-            <div class="rows_prisoners">
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>1</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>2</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>3</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>4</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>5</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>6</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>7</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>8</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>9</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>10</p>
-                </div>
-            </div>
-            <!-- fila 8 -->
-            <div class="rows_prisoners">
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>11</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>12</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>13</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>14</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>15</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>16</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>17</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>18</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>19</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>20</p>
-                </div>
-            </div>
-            <!-- fila 9 -->
-            <div class="rows_prisoners">
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>1</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>2</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>3</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>4</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>5</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>6</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>7</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>8</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>9</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>10</p>
-                </div>
-            </div>
-            <!-- fila 10 -->
-            <div class="rows_prisoners">
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>11</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>12</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>13</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>14</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>15</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>16</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>17</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>18</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>19</p>
-                </div>
-                <div class="prisoner">
-                    <img src="/assets/img/prisoner.png" alt="Prisionero">
-                    <p>20</p>
-                </div>
-            </div>
-        </div>
-        <!-- cajas -->
-        <div class="container__boxes">
-            <!-- fila 1 -->
-            <div class="rows_boxes">
-                <div class="box">
-                    <p>1</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>2</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>3</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>4</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>5</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>6</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>7</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>8</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>9</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>10</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-            </div>
-            <!-- fila 2 -->
-            <div class="rows_boxes">
-                <div class="box">
-                    <p>1</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>2</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>3</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>4</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>5</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>6</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>7</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>8</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>9</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>10</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-            </div>
-            <!-- fila 3 -->
-            <div class="rows_boxes">
-                <div class="box">
-                    <p>1</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>2</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>3</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>4</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>5</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>6</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>7</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>8</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>9</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>10</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-            </div>
-            <!-- fila 4 -->
-            <div class="rows_boxes">
-                <div class="box">
-                    <p>1</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>2</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>3</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>4</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>5</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>6</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>7</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>8</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>9</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>10</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-            </div>
-            <!-- fila 5 -->
-            <div class="rows_boxes">
-                <div class="box">
-                    <p>1</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>2</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>3</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>4</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>5</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>6</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>7</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>8</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>9</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>10</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-            </div>
-            <!-- fila 6 -->
-            <div class="rows_boxes">
-                <div class="box">
-                    <p>1</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>2</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>3</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>4</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>5</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>6</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>7</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>8</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>9</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>10</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-            </div>
-            <!-- fila 7 -->
-            <div class="rows_boxes">
-                <div class="box">
-                    <p>1</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>2</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>3</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>4</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>5</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>6</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>7</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>8</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>9</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>10</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-            </div>
-            <!-- fila 8 -->
-            <div class="rows_boxes">
-                <div class="box">
-                    <p>1</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>2</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>3</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>4</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>5</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>6</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>7</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>8</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>9</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>10</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-            </div>
-            <!-- fila 9 -->
-            <div class="rows_boxes">
-                <div class="box">
-                    <p>1</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>2</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>3</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>4</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>5</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>6</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>7</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>8</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>9</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>10</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-            </div>
-            <!-- fila 10 -->
-            <div class="rows_boxes">
-                <div class="box">
-                    <p>1</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>2</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>3</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>4</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>5</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>6</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>7</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="prisoner">
-                    <p>8</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>9</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-                <div class="box">
-                    <p>10</p>
-                    <img src="/assets/img/box2.png" alt="caja">
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
+            
+            
+             <!-- Aquí se llenarán los resultados al hacer clic en "Iniciar simulación" -->
+          
+        </section>
+      </section>
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer__author">
@@ -905,6 +236,8 @@
             </a>
         </div>
     </footer>
+
+    <script src="/script/simulacionPrisioneros.js"></script>
 </body>
 
 </html>
